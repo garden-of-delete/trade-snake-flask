@@ -16,4 +16,4 @@ def hello_world():
     return render_template('hello.html',trades=trades)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
