@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trade Snake</title>
+    <!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">-->
+    <!--    <script type=text/javascript src="{{   url_for('static', filename='js/listbox.js') }}"></script>-->
+    <!--    <script type=text/javascript src="{{   url_for('static', filename='js/listbox-scrollable.js') }}"></script>-->
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td colspan="2">
+                <hr style="border-top: 1px solid black">
+            </td>
+        </tr>
+        {% for trade in trades %}
+        <tr>
+            <td>
+                {{ trade['origin'] }} -> {{ trade['destination'] }}
+            </td>
+            <td>
+                {{ trade['n_jumps'] }} jumps
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ trade['item_name'] }}
+            </td>
+            <td>
+                {{ trade['ppj'] }} isk/jump
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr style="border-bottom: 1px solid black">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

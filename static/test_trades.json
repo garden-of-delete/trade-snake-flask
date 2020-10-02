@@ -1,0 +1,26 @@
+[
+  {
+    "origin": "jita",
+    "destination": "amarr",
+    "n_jumps": 10,
+    "profit": 1000000,
+    "ppj": 100000,
+    "item_name": "Hornet EC-300"
+  },
+  {
+    "origin": "isanamo",
+    "destination": "jita",
+    "n_jumps": 4,
+    "profit": 50000000,
+    "ppj": 12500000,
+    "item_name": "Kronos"
+  },
+  {
+    "origin": "obe",
+    "destination": "nourvukaiken",
+    "n_jumps": 6,
+    "profit": 600000,
+    "ppj": 100000,
+    "item_name": "Hornet EC-300"
+  }
+]
