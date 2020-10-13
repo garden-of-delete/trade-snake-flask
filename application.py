@@ -35,7 +35,7 @@ def serve_trades():
 @app.route('/api/accept-trade', methods=['POST'])
 def accept_trade():
     print(request.form)
-    print(request.form.selected_trade)
+    print(request.form['selected_trade'])
     #r.delete('')
 
 if __name__ == '__main__':
