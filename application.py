@@ -1,10 +1,12 @@
 from flask import Flask, render_template
+from flask_cors import CORS
 import json
 import redis
 
 r = redis.Redis(host='ec2-54-215-48-242.us-west-1.compute.amazonaws.com', port=6379, db=2, password='insight')
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 '''
 @app.route('/')
@@ -17,7 +19,7 @@ def hello_world():
     return render_template('hello.html',trades=trades)
 '''
 
-@app.route('/trades')
+@app.route('/api/trades')
 def serve_trades():
     trades = {}
     current_iter = 0
