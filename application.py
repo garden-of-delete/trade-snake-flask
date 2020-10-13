@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import json
 import redis
@@ -35,8 +35,14 @@ def serve_trades():
 @app.route('/api/accept-trade', methods=['POST'])
 def accept_trade():
     print(request.form)
-    print(request.form['selected_trade'])
-    #r.delete('')
+    try:
+        print(request.form['selected_trade'])
+        return jsonify(success=True)
+    except Exception as inst:
+        print(type(inst))  # the exception instance
+        print(inst.args)  # arguments stored in .args
+        print(inst)
+        return jsonify(success=False)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
