@@ -25,7 +25,7 @@ def serve_trades():
     while True:
         current_iter, keys = r.scan(current_iter)
         for key in keys:
-            trades[key] = json.loads(r.get(key))
+            trades[int(key)] = json.loads(r.get(int(key)))
         if current_iter == 0:
             break
     return json.dumps(trades)
