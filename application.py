@@ -28,7 +28,7 @@ def serve_trades():
             trades[key] = json.loads(r.get(key))
         if current_iter == 0:
             break
-
+    return json.dumps(trades)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
