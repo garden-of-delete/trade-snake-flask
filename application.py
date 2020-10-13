@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_cors import CORS
 import json
 import redis
@@ -31,6 +31,11 @@ def serve_trades():
         if current_iter == 0:
             break
     return json.dumps(trades)
+
+@app.route('/api/accept-trade', methods=['POST'])
+def accept_trade():
+    print(request.data)
+    #r.delete('')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
