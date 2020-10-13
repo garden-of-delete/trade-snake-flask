@@ -22,5 +22,29 @@
     "profit": 600000,
     "ppj": 100000,
     "item_name": "Hornet EC-300"
+  },
+  {
+    "origin": "hakonen",
+    "destination": "amarr",
+    "n_jumps": 13,
+    "profit": 600000,
+    "ppj": 1000353,
+    "item_name": "Hornet EC-300"
+  },
+  {
+    "origin": "khanid",
+    "destination": "jita",
+    "n_jumps": 30,
+    "profit": 500000000,
+    "ppj": 19900000,
+    "item_name": "Kronos"
+  },
+  {
+    "origin": "rorsins",
+    "destination": "nourvukaiken",
+    "n_jumps": 30,
+    "profit": 45535534,
+    "ppj": 333778,
+    "item_name": "Hornet EC-300"
   }
 ]
